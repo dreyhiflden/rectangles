@@ -48,3 +48,4 @@ if (isIntersect() == true) {
 else {
     alert('Прямокутники не перетинаються!');
 }
+
