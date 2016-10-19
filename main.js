@@ -2,8 +2,6 @@
  * Created by Dmytro on 13.10.2016.
  */
 
-'use strict';
-
 const rectangle1 = getRandomRectangle(),
       rectangle2 = getRandomRectangle();
 
@@ -23,6 +21,7 @@ document.write (`
 `);
 
 if (isIntersect(rectangle1, rectangle2)) {
+
     alert('Прямокутники перетинаються!');
 
     const rectangle3 = {
@@ -84,28 +83,28 @@ function getRandomCoordinate () {
 }
 
 function getRandomRectangle () {
-    var   x1 = getRandomCoordinate(),
-          y1 = getRandomCoordinate(),
-          x2 = getRandomCoordinate(),
-          y2 = getRandomCoordinate();
+    var x1 = getRandomCoordinate(),
+        y1 = getRandomCoordinate(),
+        x2 = getRandomCoordinate(),
+        y2 = getRandomCoordinate();
 
     return {
-          x1    : x1,
-          y1    : y1,
-          x2    : x2,
-          y2    : y2,
-          left  : Math.min(x1, x2),
-          right : Math.max(x1, x2),
-          top   : Math.max(y1, y2),
-          bottom: Math.min(y1, y2),
+        x1    : x1,
+        y1    : y1,
+        x2    : x2,
+        y2    : y2,
+        left  : Math.min(x1, x2),
+        right : Math.max(x1, x2),
+        top   : Math.max(y1, y2),
+        bottom: Math.min(y1, y2),
     }
 }
 
-function isIntersect(rectangle1, rectangle2) { // Перевірка на НЕ перетинання
-    return !(
-           rectangle1.left   > rectangle2.right
-        || rectangle1.right  < rectangle2.left
-        || rectangle1.top    < rectangle2.bottom
-        || rectangle1.bottom > rectangle2.top
-    );
+function isIntersect(rectangle1, rectangle2) {
+    return (
+            (rectangle1.left >= rectangle2.left) && (rectangle1.left <= rectangle2.right)
+        )
+        || (
+            (rectangle2.bottom >= rectangle1.bottom) && (rectangle2.bottom <= rectangle1.top)
+        )
 }
