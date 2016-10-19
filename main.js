@@ -5,20 +5,20 @@
 const rectangle1 = getRandomRectangle(),
       rectangle2 = getRandomRectangle();
 
-    document.write (`
-        Перший прямокутник<br>
-        x1:${rectangle1.x1}<br>
-        y1:${rectangle1.y1}<br>
-        x2:${rectangle1.x2}<br>
-        y2:${rectangle1.y2}<br>
-        <br>
-        Другий прямокутник<br>
-        x1:${rectangle2.x1}<br>
-        y1:${rectangle2.y1}<br>
-        x2:${rectangle2.x2}<br>
-        y2:${rectangle2.y2}<br>
-        <br>
-    `);
+document.write(`
+    Перший прямокутник<br>
+    x1:${rectangle1.x1}<br>
+    y1:${rectangle1.y1}<br>
+    x2:${rectangle1.x2}<br>
+    y2:${rectangle1.y2}<br>
+    <br>
+    Другий прямокутник<br>
+    x1:${rectangle2.x1}<br>
+    y1:${rectangle2.y1}<br>
+    x2:${rectangle2.x2}<br>
+    y2:${rectangle2.y2}<br>
+    <br>
+`);
 
 if (isIntersect(rectangle1, rectangle2)) {
 
@@ -41,8 +41,8 @@ if (isIntersect(rectangle1, rectangle2)) {
     `);
 
     const ellipse = {
-        x : (rectangle3.x2 - rectangle3.x1) / 2 + rectangle3.x1,
-        y : (rectangle3.y2 - rectangle3.y1) / 2 + rectangle3.y1,
+        x: (rectangle3.x2 - rectangle3.x1) / 2 + rectangle3.x1,
+        y: (rectangle3.y2 - rectangle3.y1) / 2 + rectangle3.y1,
         rx: Math.abs((rectangle3.x2 - rectangle3.x1) / 2),
         ry: Math.abs((rectangle3.y2 - rectangle3.y1) / 2),
     };
@@ -53,7 +53,7 @@ if (isIntersect(rectangle1, rectangle2)) {
         const point                = getRandomPoint(),
               ifPointInsideEllipse = checkIfPointInsideEllipse(point, ellipse);
 
-        if (ifPointInsideEllipse ) {
+        if (ifPointInsideEllipse) {
             array.push(point)
         }
     }
@@ -71,18 +71,18 @@ function checkIfPointInsideEllipse (point, ellipse) {
     return partX + partY <= 1;
 }
 
-function getRandomPoint () {
+function getRandomPoint() {
     return {
         x: getRandomCoordinate(),
         y: getRandomCoordinate(),
     };
 }
 
-function getRandomCoordinate () {
+function getRandomCoordinate() {
     return Math.round(Math.random() * 100);
 }
 
-function getRandomRectangle () {
+function getRandomRectangle() {
     var x1 = getRandomCoordinate(),
         y1 = getRandomCoordinate(),
         x2 = getRandomCoordinate(),
