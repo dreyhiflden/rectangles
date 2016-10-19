@@ -5,20 +5,20 @@
 const rectangle1 = getRandomRectangle(),
       rectangle2 = getRandomRectangle();
 
-document.write (`
-  Перший прямокутник<br>
-  x1:${rectangle1.x1}<br>
-  y1:${rectangle1.y1}<br>
-  x2:${rectangle1.x2}<br>
-  y2:${rectangle1.y2}<br>
-                     <br>
-  Другий прямокутник<br>
-  x1:${rectangle2.x1}<br>
-  y1:${rectangle2.y1}<br>
-  x2:${rectangle2.x2}<br>
-  y2:${rectangle2.y2}<br>
-  <br>
-`);
+    document.write (`
+        Перший прямокутник<br>
+        x1:${rectangle1.x1}<br>
+        y1:${rectangle1.y1}<br>
+        x2:${rectangle1.x2}<br>
+        y2:${rectangle1.y2}<br>
+        <br>
+        Другий прямокутник<br>
+        x1:${rectangle2.x1}<br>
+        y1:${rectangle2.y1}<br>
+        x2:${rectangle2.x2}<br>
+        y2:${rectangle2.y2}<br>
+        <br>
+    `);
 
 if (isIntersect(rectangle1, rectangle2)) {
 
@@ -32,13 +32,13 @@ if (isIntersect(rectangle1, rectangle2)) {
     };
 
     document.write(`
-    Третій прямокутник<br>
-    x1:${rectangle3.x1}<br>
-    y1:${rectangle3.y1}<br>
-    x2:${rectangle3.x2}<br>
-    y2:${rectangle3.y2}<br>
-    <br>
-`);
+        Третій прямокутник<br>
+        x1:${rectangle3.x1}<br>
+        y1:${rectangle3.y1}<br>
+        x2:${rectangle3.x2}<br>
+        y2:${rectangle3.y2}<br>
+        <br>
+    `);
 
     const ellipse = {
         x : (rectangle3.x2 - rectangle3.x1) / 2 + rectangle3.x1,
