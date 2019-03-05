@@ -1,7 +1,3 @@
-/**
- * Created by Dmytro on 13.10.2016.
- */
-
 const rectangle1 = getRandomRectangle(),
       rectangle2 = getRandomRectangle();
 
